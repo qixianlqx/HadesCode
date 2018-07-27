@@ -1,7 +1,10 @@
 @charset "utf-8";
+
 /* CSS Document */
 
+
 /*重置*/
+
 body {
     padding: 0;
     margin: 0;
@@ -17,18 +20,22 @@ a {
     transition: all .4s;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
     text-decoration: none;
     color: #000;
 }
 
-ul, li {
+ul,
+li {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     margin: 0;
     padding: 0;
 }
@@ -37,14 +44,16 @@ h1, h2, h3 {
     clear: both;
 }
 
+
 /*header*/
+
 #header {
-    background:#498c7d;
+    background: #498c7d;
     width: 100%;
     box-shadow: 0 0 10px #003317;
 }
 
-.homefixed{
+.homefixed {
     position: fixed;
     z-index: 1000;
     padding: 0px 0px;
@@ -58,33 +67,36 @@ h1, h2, h3 {
     margin-bottom: 0;
 }
 
-.navbar-style .nav > li {
+.navbar-style .nav>li {
     padding: 20px 0;
 }
 
-.navbar-style .nav > li > a {
+.navbar-style .nav>li>a {
     padding: 10px 20px;
     font-size: 16px;
     color: #fff;
 }
 
-.navbar-style .nav > li > a:hover {
+.navbar-style .nav>li>a:hover {
     background: none;
 }
 
-.navbar-style .nav .open > a, .navbar-style .nav li > a:focus {
+.navbar-style .nav .open>a,
+.navbar-style .nav li>a:focus {
     color: #146f42;
 }
 
-.navbar-style .nav .dropdown-menu > li > a {
+.navbar-style .nav .dropdown-menu>li>a {
     padding: 6px 20px;
 }
 
-.logo{
+.logo {
     margin-top: -8px;
 }
 
+
 /*banner*/
+
 #banner {
     position: relative;
 }
@@ -115,7 +127,9 @@ h1, h2, h3 {
     font-size: 24px;
 }
 
+
 /*service*/
+
 .title {
     padding: 20px 0;
 }
@@ -128,7 +142,7 @@ h1, h2, h3 {
     margin-top: 5px;
     color: #498c7d;
     letter-spacing: 1px;
-    text-transform:uppercase;
+    text-transform: uppercase;
 }
 
 .title h2 {
@@ -229,9 +243,12 @@ h1, h2, h3 {
     padding: 0;
 }
 
+
 /*about*/
+
 #about {
-    background: url("../images/index-about-img.jpg")/*tpa=/images/index-about-img.jpg*/ no-repeat;
+    background: url("../images/index-about-img.jpg")/*tpa=/images/index-about-img.jpg*/
+    no-repeat;
     background-size: 100% 100%;
     display: flex;
     display: -webkit-flex;
@@ -270,13 +287,16 @@ h1, h2, h3 {
     text-transform: uppercase;
 }
 
-#about .about-text a:hover,#about .about-text a:focus {
+#about .about-text a:hover,
+#about .about-text a:focus {
     text-decoration: none;
     background-color: #498c7d;
     color: #fff;
 }
 
+
 /*case*/
+
 #case {
     background: #e6e6e6;
 }
@@ -303,8 +323,8 @@ h1, h2, h3 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 96%;
     display: flex;
     display: -webkit-flex;
     align-items: center;
@@ -362,19 +382,21 @@ h1, h2, h3 {
     padding: 0;
 }
 
+
 /*culture*/
+
 #culture {
     background: #e6e6e6;
 }
 
 .culture {
-    background: url("../images/culture-bg.jpg")/*tpa=/images/culture-bg.jpg*/ no-repeat;
+    background: url("../images/culture-bg.jpg") no-repeat;
     background-size: 100% 100%;
 }
 
 .culture-left {
-    background: url("../images/culture-left-img.png")/*tpa=/images/culture-left-img.png*/ no-repeat;
-    background-size: 100%;
+    background: url("../images/culture-left-img.png") no-repeat;
+    background-size: cover;
     padding: 5% 10% 33% 10%;
     margin: 12% 0;
 }
@@ -394,7 +416,8 @@ h1, h2, h3 {
 }
 
 .culture-right {
-    background: url("../images/culture-right-img.png")/*tpa=/images/culture-right-img.png*/ no-repeat;
+    background: url("../images/culture-right-img.png")/*tpa=/images/culture-right-img.png*/
+    no-repeat;
     background-size: 86%;
     padding: 18% 10% 42% 30%;
     margin-top: 8%;
@@ -417,7 +440,9 @@ h1, h2, h3 {
     line-height: 2;
 }
 
+
 /*footer*/
+
 #footer {
     background: #498c7d;
 }
@@ -477,7 +502,9 @@ h1, h2, h3 {
     margin-right: 2%;
 }
 
+
 /*GoTop*/
+
 .scroll-to-top {
     position: fixed;
     bottom: 40px;
@@ -505,13 +532,17 @@ h1, h2, h3 {
     color: #00cc99;
 }
 
+
 /********************************首页结束*************************************************************/
 
+
 /********************************内页开始*************************************************************/
+
+
 /*technicalTeam*/
 
-.pager a{
-    color:#498c7d;
+.pager a {
+    color: #498c7d;
 }
 
 #innerHeader {
@@ -520,10 +551,10 @@ h1, h2, h3 {
     -moz-box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.15);
     -ms-box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.15);
     box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.15);
-    margin-bottom:1px;
+    margin-bottom: 1px;
 }
 
-#innerHeader .innerLogo{
+#innerHeader .innerLogo {
     margin-top: -8px;
 }
 
@@ -538,11 +569,11 @@ h1, h2, h3 {
     box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.15);
 }
 
-#innerHeader .navbar-style .nav > li > a {
+#innerHeader .navbar-style .nav>li>a {
     color: #646464;
 }
 
-#innerHeader .navbar-style .nav > li > a:hover {
+#innerHeader .navbar-style .nav>li>a:hover {
     color: #498c7d;
 }
 
@@ -590,7 +621,8 @@ h1, h2, h3 {
     color: #333;
 }
 
-.technicalTeam a:hover, .technicalTeam a:focus {
+.technicalTeam a:hover,
+.technicalTeam a:focus {
     text-decoration: none;
     color: #333;
 }
@@ -611,7 +643,7 @@ h1, h2, h3 {
     transition: all 0.3s ease-in-out;
 }
 
-.technicalTeam .team:hover{
+.technicalTeam .team:hover {
     top: -5px;
     -webkit-box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
     -moz-box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
@@ -634,7 +666,7 @@ h1, h2, h3 {
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp:2;
+    -webkit-line-clamp: 2;
     overflow: hidden;
 }
 
@@ -648,7 +680,8 @@ h1, h2, h3 {
 
 .indeDevelopment .appContent .indeTitle {
     margin: 15px 0;
-    background: url("../images/appbg.png")/*tpa=/images/appbg.png*/ no-repeat center;
+    background: url("../images/appbg.png")/*tpa=/images/appbg.png*/
+    no-repeat center;
     background-size: 100%;
 }
 
@@ -670,7 +703,8 @@ h1, h2, h3 {
     content: "";
     height: 6px;
     margin-top: 8px;
-    background: url("../images/leftline.png")/*tpa=/images/leftline.png*/ no-repeat center left;
+    background: url("../images/leftline.png")/*tpa=/images/leftline.png*/
+    no-repeat center left;
 }
 
 .indeDevelopment .appContent .indeTitle h4:after {
@@ -682,7 +716,8 @@ h1, h2, h3 {
     width: 165px;
     height: 6px;
     margin-top: 8px;
-    background: url("../images/rightline.png")/*tpa=/images/rightline.png*/ no-repeat center right;
+    background: url("../images/rightline.png")/*tpa=/images/rightline.png*/
+    no-repeat center right;
 }
 
 .indeDevelopment .appContent .ftaApp .appPic img {
@@ -720,7 +755,7 @@ h1, h2, h3 {
     display: inline-block;
 }
 
-.indeDevelopment .appContent .ftaApp .appDownLoad div p{
+.indeDevelopment .appContent .ftaApp .appDownLoad div p {
     margin-top: 10px;
 }
 
@@ -729,7 +764,9 @@ h1, h2, h3 {
     margin-bottom: 0;
 }
 
+
 /*teamDetail*/
+
 .teamDetail {
     background: #fafcfc;
     padding-top: 15px;
@@ -760,6 +797,7 @@ h1, h2, h3 {
     font-weight: bold;
 }
 
+
 /*aboutHighDao*/
 
 .aboutHighDao .indeDevelopment .appContent {
@@ -778,13 +816,14 @@ h1, h2, h3 {
     padding: 0;
 }
 
-.aboutHighDao .tab ul li a{
+.aboutHighDao .tab ul li a {
     display: block;
     padding: 10px 30px;
     color: #498c7d;
 }
 
-.aboutHighDao .tab a:hover, .aboutHighDao .tab a:focus {
+.aboutHighDao .tab a:hover,
+.aboutHighDao .tab a:focus {
     text-decoration: none;
     background: #498c7d;
     color: #fff;
@@ -812,10 +851,9 @@ h1, h2, h3 {
     margin-left: 8px;
 }
 
-.innerAbout .breadcrumb .line{
+.innerAbout .breadcrumb .line {
     background: #000;
 }
-
 
 .aboutHighDao .aboutContent p {
     text-indent: 25px;
@@ -843,7 +881,9 @@ h1, h2, h3 {
     margin-bottom: 0;
 }
 
+
 /*companyProfiles*/
+
 .companyProfiles {
     position: relative;
 }
@@ -872,21 +912,25 @@ h1, h2, h3 {
     text-indent: 25px;
 }
 
+
 /*corporateCulture*/
+
 .corporateCulture .breadcrumb h3,
-.corporateCulture .breadcrumb small{
-    color:#fff;
+.corporateCulture .breadcrumb small {
+    color: #fff;
 }
 
-.corporateCulture .breadcrumb .line{
-    background:#fff;
+.corporateCulture .breadcrumb .line {
+    background: #fff;
 }
 
-.corporateCulture .culture-right{
+.corporateCulture .culture-right {
     margin-top: 3%;
 }
 
+
 /*companyHonors*/
+
 .companyHonors {
     background: #e6e6e6;
     padding-bottom: 20px;
@@ -899,8 +943,8 @@ h1, h2, h3 {
     margin: 0 5px;
 }
 
-.companyHonors .breadcrumb .line{
-    background:#000;
+.companyHonors .breadcrumb .line {
+    background: #000;
 }
 
 .companyHonors .honnor img {
@@ -916,7 +960,9 @@ h1, h2, h3 {
     color: #969696;
 }
 
+
 /*newslist*/
+
 .newsList {
     background: #fafcfc;
     padding-bottom: 25px;
@@ -942,7 +988,7 @@ h1, h2, h3 {
     transition: all 0.3s ease-in-out;
 }
 
-.newsList .newsItem:hover{
+.newsList .newsItem:hover {
     top: -5px;
     -webkit-box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
     -moz-box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
@@ -988,7 +1034,7 @@ h1, h2, h3 {
     -webkit-line-clamp: 3;
     overflow: hidden;
     margin-top: 20px;
-    color:#646464;
+    color: #646464;
 }
 
 .newsList .newsItem .newsTxt span {
@@ -1045,9 +1091,11 @@ h1, h2, h3 {
     vertical-align: middle;
 }
 
-.page a:hover, .page a:focus {
+.page a:hover,
+.page a:focus {
     text-decoration: none;
 }
+
 
 /*newsDetail*/
 
@@ -1104,7 +1152,9 @@ h1, h2, h3 {
     color: #646464;
 }
 
+
 /*recruit*/
+
 .recruit .recruitTitle {
     margin: 15px auto;
 }
@@ -1117,7 +1167,8 @@ h1, h2, h3 {
     line-height: 2;
 }
 
-.recruit a:hover, .recruit a:focus {
+.recruit a:hover,
+.recruit a:focus {
     text-decoration: none;
 }
 
@@ -1142,54 +1193,55 @@ h1, h2, h3 {
     top: 12px;
 }
 
-.recruit .panel-primary{
+.recruit .panel-primary {
     border-color: #438f64
 }
 
-.recruit .panel-primary>.panel-heading{
+.recruit .panel-primary>.panel-heading {
     background-color: #438f64;
     border-color: #438f64;
 }
 
+
 /*contact*/
 
-.contact .contactInfo .contactTxt{
+.contact .contactInfo .contactTxt {
     margin: 15px auto;
 }
 
-.contact .contactInfo .contactTxt h4{
+.contact .contactInfo .contactTxt h4 {
     font-weight: bold;
 }
 
-.contact .contactInfo .contactTxt p{
-    color:#646464;
+.contact .contactInfo .contactTxt p {
+    color: #646464;
 }
 
-.contact .contactInfo .contactTxt .row{
+.contact .contactInfo .contactTxt .row {
     display: flex;
     display: -webkit-flex;
     align-items: center;
 }
 
-.contact .contactInfo .contactTxt .row button{
+.contact .contactInfo .contactTxt .row button {
     float: right;
 }
 
-.contact .paddN{
+.contact .paddN {
     padding: 0;
 }
 
-.contact .map iframe{
+.contact .map iframe {
     border: 1px solid #ccc;
 }
 
-.contact .contactType{
-   background: #fafcfc;
+.contact .contactType {
+    background: #fafcfc;
     padding: 50px 0;
     margin-top: 15px;
 }
 
-.contact .contactType .common{
+.contact .contactType .common {
     padding: 25px 50px;
     margin-bottom: 10px;
     text-align: center;
@@ -1209,7 +1261,7 @@ h1, h2, h3 {
     transition: all 0.3s ease-in-out;
 }
 
-.contact .contactType .common:hover{
+.contact .contactType .common:hover {
     -webkit-box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
     -moz-box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
     -ms-box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
@@ -1217,88 +1269,89 @@ h1, h2, h3 {
     top: -5px;
 }
 
-.contact .contactType .common .pic{
+.contact .contactType .common .pic {
     width: 90px;
     height: 90px;
     margin: auto;
 }
 
-.contact .contactType .common .pic img{
+.contact .contactType .common .pic img {
     display: block;
     width: 100%;
 }
 
-.contact .contactType .common h4{
+.contact .contactType .common h4 {
     margin: 15px 0;
 }
 
-.contact .contactType .common span{
+.contact .contactType .common span {
     display: block;
 }
 
-.contact .contactType .common a{
+.contact .contactType .common a {
     display: inline-block;
     padding: 10px 25px;
     margin: 15px auto;
 }
 
-.contact .contactType .address a:hover{
+.contact .contactType .address a:hover {
     background: #ddb117;
-    color:#fff;
+    color: #fff;
     text-decoration: none;
 }
 
-.contact .contactType .address{
+.contact .contactType .address {
     border-top: 3px solid #ddb117;
 }
 
-.contact .contactType .address a{
+.contact .contactType .address a {
     border: 1px solid #ddb117;
     color: #ddb117;
 }
 
-.contact .contactType .telephone{
+.contact .contactType .telephone {
     border-top: 3px solid #58af68;
 }
 
-.contact .contactType .telephone a{
+.contact .contactType .telephone a {
     border: 1px solid #58af68;
     color: #58af68;
 }
 
-.contact .contactType .telephone a:hover{
+.contact .contactType .telephone a:hover {
     background: #58af68;
-    color:#fff;
+    color: #fff;
     text-decoration: none;
 }
 
-.contact .contactType .message{
+.contact .contactType .message {
     border-top: 3px solid #55c1d4;
 }
 
-.contact .contactType .message a{
+.contact .contactType .message a {
     border: 1px solid #55c1d4;
     color: #55c1d4;
 }
 
-.contact .contactType .message a:hover{
+.contact .contactType .message a:hover {
     background: #55c1d4;
-    color:#fff;
+    color: #fff;
     text-decoration: none;
 }
 
+
 /*caseList*/
 
-.caseList{
-  background:#fafcfc;
+.caseList {
+    background: #fafcfc;
     padding-bottom: 25px;
 }
 
-.caseList .tab{
+.caseList .tab {
     margin: 15px auto;
 }
 
-.caseList .tab ul li{
+.caseList .tab ul li {
     display: inline-block;
     width: 140px;
     height: 42px;
@@ -1309,26 +1362,27 @@ h1, h2, h3 {
     border-radius: 5px;
 }
 
-.caseList .tab #myTab li.active{
-    background:#498c7d;
+.caseList .tab #myTab li.active {
+    background: #498c7d;
 }
 
-.caseList .tab #myTab li.active a{
-    color:#fff;
+.caseList .tab #myTab li.active a {
+    color: #fff;
 }
 
-.caseList .tab ul  a{
+.caseList .tab ul a {
     display: block;
     color: #498c7d;
 }
 
-.caseList .tab a:hover, .caseList .tab a:focus {
+.caseList .tab a:hover,
+.caseList .tab a:focus {
     text-decoration: none;
     background: #498c7d;
     color: #fff;
 }
 
-.caseList #myTabContent .caseItem{
+.caseList #myTabContent .caseItem {
     cursor: pointer;
     background: #fff;
     padding: 15px;
@@ -1346,7 +1400,7 @@ h1, h2, h3 {
     transition: all 0.3s ease-in-out;
 }
 
-.caseList #myTabContent .caseItem:hover{
+.caseList #myTabContent .caseItem:hover {
     top: -5px;
     -webkit-box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
     -moz-box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
@@ -1354,26 +1408,26 @@ h1, h2, h3 {
     box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
 }
 
-.caseList #myTabContent .caseItem h5{
+.caseList #myTabContent .caseItem h5 {
     font-weight: bold;
     word-break: break-all;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp:1;
+    -webkit-line-clamp: 1;
     overflow: hidden;
 }
 
-.caseList #myTabContent .caseItem p{
+.caseList #myTabContent .caseItem p {
     word-break: break-all;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp:2;
+    -webkit-line-clamp: 2;
     overflow: hidden;
 }
 
-.caseList #myTabContent .caseItem .footLink{
+.caseList #myTabContent .caseItem .footLink {
     display: flex;
     display: -webkit-flex;
     align-items: center;
@@ -1381,22 +1435,21 @@ h1, h2, h3 {
 }
 
 .caseList #myTabContent .caseItem .footLink div a:hover,
-.caseList #myTabContent .caseItem .footLink div a:focus{
+.caseList #myTabContent .caseItem .footLink div a:focus {
     text-decoration: none;
     background: #2081aa;
-    color:#fff;
+    color: #fff;
 }
 
-.caseList #myTabContent .caseItem .footLink div{
+.caseList #myTabContent .caseItem .footLink div {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     flex: 1;
 }
 
-.caseList #myTabContent .caseItem .footLink .leftLink{
+.caseList #myTabContent .caseItem .footLink .leftLink {
     padding: 5px 15px;
-    color:#2081aa;
+    color: #2081aa;
     border: 1px solid #2081aa;
     border-radius: 4px;
 }
-

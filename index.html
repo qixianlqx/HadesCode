@@ -6,18 +6,23 @@
     <meta content="width=device-width,inital-scarel=1" name="viewport" />
     <title>哈迪斯</title>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" href="css/media.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/media.css" />
     <link rel="stylesheet" type="text/css" href="css/animate.css" />
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="css/common.css" />
-
+    <style>
+        #proRow .case-item {
+            padding: 5px;
+        }
+    </style>
     <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/scrolltopcontrol.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/wow.min.js "></script>
+
     <script type="text/javascript">
         new WOW().init();
     </script>
@@ -32,8 +37,8 @@
                     <button type="button" data-toggle="collapse" data-target="#mb-navbar" class="navbar-toggle"><span
                         class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
                         class="icon-bar"></span><span class="icon-bar"></span></button>
-                    <a href="#" class="navbar-brand">
-                        <img src="images/logo.png" class="img-responsive logo LogoImg">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="images/logo.png" class="img-responsive logo" alt="logo">
                     </a>
                 </div>
                 <div id="mb-navbar" class="collapse navbar-collapse">
@@ -45,7 +50,7 @@
                             <a href="about.html">关于哈迪斯</a>
                         </li>
                         <li>
-                            <a href="team.html">哈迪斯团队</a>
+                            <a href="team.html">产品中心</a>
                         </li>
                         <li>
                             <a href="caselist.html">哈迪斯服务</a>
@@ -104,15 +109,15 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" id="indextype">
                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 paddnone">
-                    <a href="javascript:;">
+                    <a href="about.html">
                         <div class="service-item">
                             <div class="service-img">
                                 <img src="images/icon_pic1.jpg">
                             </div>
                             <div class="service-hover">
-                                <img src="images/HD-logo.png">
+                                <img src="images/logo-small.png">
                                 <h3>关于哈迪斯</h3>
                                 <p>哈迪斯致力于为客户提供更好的服务 严谨的态度</p>
                             </div>
@@ -120,7 +125,7 @@
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 paddnone">
-                    <a href="javascript:;">
+                    <a href="newslist.html">
                         <div class="service-item">
                             <div class="service-img">
                                 <img src="images/icon_pic2.jpg">
@@ -128,7 +133,8 @@
                             <div class="service-hover">
                                 <img src="images/news-icon.png">
                                 <h3>新闻中心</h3>
-                                <p>发布浏览业内消息 公司最新状态 参与活动状态</p>
+                                <p><span class="serviceSpan"> 业内消息</span><span class="serviceSpan">公司最新状态</span><span class="serviceSpan">参与活动状态</span>
+                                </p>
                             </div>
                         </div>
                     </a>
@@ -142,13 +148,13 @@
                             <div class="service-hover">
                                 <img src="images/case-icon.png">
                                 <h3>哈迪斯服务</h3>
-                                <p>展会布置 瓷器展览 旧家具赏析等服务</p>
+                                <p>产品安装 产品调试 售后服务</p>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 paddnone">
-                    <a href="javascript:;">
+                    <a href="contact.html">
                         <div class="service-item">
                             <div class="service-img">
                                 <img src="images/icon_pic2.jpg">
@@ -171,8 +177,7 @@
                 <div class="col-md-12">
                     <div class="about-text">
                         <h1>哈迪斯公司</h1>
-                        <h4>我们有严谨的态度 专业的技术 全面的服务 多年的瓷器工作经验 靠谱的团队</h4>
-                        <p>展会现场布置&nbsp;&nbsp;&nbsp;&nbsp;瓷器展览流程&nbsp;&nbsp;&nbsp;&nbsp;旧家具赏析&nbsp;&nbsp;&nbsp;&nbsp;回收修复</p>
+                        <h4>我们有严谨的态度 专业的技术 全面的服务 诚实守信 品质第一</h4>
                         <a class="about-btn" href="#">About Us</a>
                     </div>
                 </div>
@@ -186,131 +191,32 @@
                 <div class="col-lg-12">
                     <div class="title">
                         <div>
-                            <h2>哈迪斯 - <span>服务展示</span></h2>
-                            <p>HADES Service Display</p>
+                            <h2>哈迪斯 - <span>产品展示</span></h2>
+                            <p>HADES Product Display</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 paddnone">
+            <div class="row" id="proRow" data-bind="foreach: ProDetails">
+                <div class="col-lg-3  col-xs-12 paddnone">
                     <div class="case-item">
                         <div class="case-img">
-                            <img src="images/case-img1.jpg">
+                            <img data-bind="style:{width:'98%',height:'200px'},attr:{src:'images/PCB/'+ img,}">
                         </div>
-                        <div class="case-hover">
-                            <div class="case-text">
-                                <h2>云艺师</h2>
-                                <h4>家居商城类APP项目</h4>
-                                <p>毕竟现在书市上绝大部分的畅销书皆是一群欺世盗名的泛泛之辈所著。他们所著之书，必然笔风极富华丽唯美，但深究之下，竟是一片虚无。</p>
+                        <div class="case-hover" id="case1" style="margin: 5px;">
+                            <div class="case-text js--animations">
+                                <div data-bind="text:name" style="color:white;font-size:22px;margin: 25px 0;"></div>
+                                <ul style="color:white;text-align: left;">
+                                    <li>层数：<span data-bind=" text:num"></span></li>
+                                    <li><span data-bind="text:typeid==1 ? '线宽线距':'板厚'"></span>：<span data-bind=" text:linewidth"></span></li>
+                                    <li><span data-bind="text:typeid==1 ? '最小孔径':'线宽线距'"></span>：<span data-bind=" text:min"></span></li>
+                                </ul>
                                 <a class="case-more" href="#">查看详情</a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 paddnone">
                     <div class="case-item">
-                        <div class="case-img">
-                            <img src="images/case-img2.jpg">
-                        </div>
-                        <div class="case-hover">
-                            <div class="case-text">
-                                <h2>云艺师</h2>
-                                <h4>家居商城类APP项目</h4>
-                                <p>毕竟现在书市上绝大部分的畅销书皆是一群欺世盗名的泛泛之辈所著。他们所著之书，必然笔风极富华丽唯美，但深究之下，竟是一片虚无。</p>
-                                <a class="case-more" href="#">查看详情</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 paddnone">
-                    <div class="case-item">
-                        <div class="case-img">
-                            <img src="images/case-img1.jpg">
-                        </div>
-                        <div class="case-hover">
-                            <div class="case-text">
-                                <h2>云艺师</h2>
-                                <h4>家居商城类APP项目</h4>
-                                <p>毕竟现在书市上绝大部分的畅销书皆是一群欺世盗名的泛泛之辈所著。他们所著之书，必然笔风极富华丽唯美，但深究之下，竟是一片虚无。</p>
-                                <a class="case-more" href="#">查看详情</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 paddnone">
-                    <div class="case-item">
-                        <div class="case-img">
-                            <img src="images/case-img2.jpg">
-                        </div>
-                        <div class="case-hover">
-                            <div class="case-text">
-                                <h2>云艺师</h2>
-                                <h4>家居商城类APP项目</h4>
-                                <p>毕竟现在书市上绝大部分的畅销书皆是一群欺世盗名的泛泛之辈所著。他们所著之书，必然笔风极富华丽唯美，但深究之下，竟是一片虚无。</p>
-                                <a class="case-more" href="#">查看详情</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 paddnone">
-                    <div class="case-item">
-                        <div class="case-img">
-                            <img src="images/case-img1.jpg">
-                        </div>
-                        <div class="case-hover">
-                            <div class="case-text">
-                                <h2>云艺师</h2>
-                                <h4>家居商城类APP项目</h4>
-                                <p>毕竟现在书市上绝大部分的畅销书皆是一群欺世盗名的泛泛之辈所著。他们所著之书，必然笔风极富华丽唯美，但深究之下，竟是一片虚无。</p>
-                                <a class="case-more" href="#">查看详情</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 paddnone">
-                    <div class="case-item">
-                        <div class="case-img">
-                            <img src="images/case-img2.jpg">
-                        </div>
-                        <div class="case-hover">
-                            <div class="case-text">
-                                <h2>云艺师</h2>
-                                <h4>家居商城类APP项目</h4>
-                                <p>毕竟现在书市上绝大部分的畅销书皆是一群欺世盗名的泛泛之辈所著。他们所著之书，必然笔风极富华丽唯美，但深究之下，竟是一片虚无。</p>
-                                <a class="case-more" href="#">查看详情</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 paddnone">
-                    <div class="case-item">
-                        <div class="case-img">
-                            <img src="images/case-img1.jpg">
-                        </div>
-                        <div class="case-hover">
-                            <div class="case-text">
-                                <h2>云艺师</h2>
-                                <h4>家居商城类APP项目</h4>
-                                <p>毕竟现在书市上绝大部分的畅销书皆是一群欺世盗名的泛泛之辈所著。他们所著之书，必然笔风极富华丽唯美，但深究之下，竟是一片虚无。</p>
-                                <a class="case-more" href="#">查看详情</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 paddnone">
-                    <div class="case-item">
-                        <div class="case-img">
-                            <img src="images/case-img2.jpg">
-                        </div>
-                        <div class="case-hover">
-                            <div class="case-text">
-                                <h2>云艺师</h2>
-                                <h4>家居商城类APP项目</h4>
-                                <p>毕竟现在书市上绝大部分的畅销书皆是一群欺世盗名的泛泛之辈所著。他们所著之书，必然笔风极富华丽唯美，但深究之下，竟是一片虚无。</p>
-                                <a class="case-more" href="#">查看详情</a>
-                            </div>
-                        </div>
+                        <span data-bind="text:name" class="proitem"></span>
                     </div>
                 </div>
             </div>
@@ -337,7 +243,7 @@
                         <div class="culture-left">
                             <div class="culture-text">
                                 <h2>哈迪斯-企业介绍</h2>
-                                <p>我们致力于提供移动互联网应用程序开发、整体品牌营销及市场推广的一站式整体解决方案,是目前宁波地区最专业、最具有行业影响力的IOS、Android系统终端软件产品供应商之一</p>
+                                <p>深圳市哈迪斯进出口有限公司是一家主营全进口汽车养护品及相关配套产品的贸易型公司。随着汽车行业的不断发展，汽车深化养护品的应用正越来越受到4S店及消费者的认可。现本公司业务拓展需要，诚揽各方有识之士加盟，公司将提供优质的专业知识培训，良好的办公环境及完善的福利保障，共创美好明天</p>
                             </div>
                         </div>
                     </div>
@@ -346,10 +252,8 @@
                             <div class="culture-text">
                                 <h2>公司主营业务</h2>
                                 <span>Main business of the company</span>
-                                <p>
-                                    定制化APP设计制作<br> 一站式H5网页设计制作
-                                    <br> 只能设备 移动遥控软件设计
-                                </p>
+                                <span>PCB打样</span>
+                                <span>PCB定制化</span>
                             </div>
                         </div>
                     </div>
@@ -374,15 +278,15 @@
                 </div>
                 <div class="col-md-5 col-sm-5">
                     <div class="footer-erwei">
-                        <div>
+                        <!-- <div>
                             <a href="#" class="thumbnail">
                                 <img src="images/erweima1.jpg">
                             </a>
                             <p>扫一扫下载外贸助手APP</p>
-                        </div>
+                        </div> -->
                         <div>
                             <a href="#" class="thumbnail">
-                                <img src="images/erweima2.jpg">
+                                <img src="images/qrcode.png" class="qrcode">
                             </a>
                             <p>扫码关注恒道微信公众号</p>
                         </div>
@@ -392,122 +296,31 @@
         </div>
     </div>
     <div id="copyright">
-        <p><span>服务条款</span>Copyright©2018　深圳市哈迪斯进出口有限公司　保留所有权利　</p>
+        <p><span></span>Copyright©2018　深圳市哈迪斯进出口有限公司　保留所有权利　</p>
     </div>
     <script type="text/javascript">
-        //case
-        (function($) {
-            $.fn.extend({
-                show: function(div) {
-                    var w = this.width(),
-                        h = this.height(),
-                        xpos = w / 2,
-                        ypos = h / 2,
-                        eventType = "",
-                        direct = "";
-                    this.css({
-                        "overflow": "hidden",
-                        "position": "relative"
-                    });
-                    div.css({
-                        "position": "absolute",
-                        "top": this.width()
-                    });
-                    this.on("mouseenter mouseleave", function(e) {
-                        var oe = e || event;
-                        var x = oe.offsetX;
-                        var y = oe.offsetY;
-                        var angle = Math.atan((x - xpos) / (y - ypos)) * 180 / Math.PI;
-                        if (angle > -45 && angle < 45 && y > ypos) {
-                            direct = "down";
-                        }
-                        if (angle > -45 && angle < 45 && y < ypos) {
-                            direct = "up";
-                        }
-                        if (((angle > -90 && angle < -45) || (angle > 45 && angle < 90)) && x > xpos) {
-                            direct = "right";
-                        }
-                        if (((angle > -90 && angle < -45) || (angle > 45 && angle < 90)) && x < xpos) {
-                            direct = "left";
-                        }
-                        move(e.type, direct)
-                    });
-
-                    function move(eventType, direct) {
-                        if (eventType == "mouseenter") {
-                            switch (direct) {
-                                case "down":
-                                    div.css({
-                                        "left": "0px",
-                                        "top": h
-                                    }).stop(true, true).animate({
-                                        "top": "0px"
-                                    }, "fast");
-                                    break;
-                                case "up":
-                                    div.css({
-                                        "left": "0px",
-                                        "top": -h
-                                    }).stop(true, true).animate({
-                                        "top": "0px"
-                                    }, "fast");
-                                    break;
-                                case "right":
-                                    div.css({
-                                        "left": w,
-                                        "top": "0px"
-                                    }).stop(true, true).animate({
-                                        "left": "0px"
-                                    }, "fast");
-                                    break;
-                                case "left":
-                                    div.css({
-                                        "left": -w,
-                                        "top": "0px"
-                                    }).stop(true, true).animate({
-                                        "left": "0px"
-                                    }, "fast");
-                                    break;
-                            }
-                        } else {
-                            switch (direct) {
-                                case "down":
-                                    div.stop(true, true).animate({
-                                        "top": h
-                                    }, "fast");
-                                    break;
-                                case "up":
-                                    div.stop(true, true).animate({
-                                        "top": -h
-                                    }, "fast");
-                                    break;
-                                case "right":
-                                    div.stop(true, true).animate({
-                                        "left": w
-                                    }, "fast");
-                                    break;
-                                case "left":
-                                    div.stop(true, true).animate({
-                                        "left": -w
-                                    }, "fast");
-                                    break;
-                            }
-                        }
-                    }
-                }
-            });
-        })(jQuery)
-        /*
-         *使用说明：
-         *		$(".a").show($(".b"))
-         *		a是展示层，b是遮罩层
-         *		b在a的内部
-         */
-
-        $(".case-item").each(function(i) {
-            $(this).show($(".case-hover").eq(i));
+        $(function() {
+            //产品展示列表鼠标选中效果
+            //默认不显示
+            // $("#case .case-hover").hide();
+            // //鼠标移开悬停效果
+            // $(".case-item").on("mouseenter mouseleave", function(e) {
+            //     if (e.type == "mouseenter") {
+            //         //显示选中的产品
+            //         var id = $(this).find(".case-hover").attr("id");
+            //         $("#case .case-hover[id!=" + id + "]").hide(800);
+            //         $(this).find(".case-hover").show(600);
+            //     } else {
+            //         //隐藏之前选中的产品
+            //         $("#case .case-hover").hide(600);
+            //     }
+            // });
         });
     </script>
 </body>
+<script type="text/javascript" src="js/proJs/pro.js"></script>
+<script type="text/javascript" src="js/knockoutjs/linq.min.js"></script>
+<script type="text/javascript" src="js/knockoutjs/knockout-3.4.2.js"></script>
+<script type="text/javascript" src="js/source/index.js"></script>
 
 </html>
