@@ -2,3 +2,8 @@
     width: 200px;
     height: 66px;
 }
+
+.navbar-brand {
+    padding: 0;
+    padding-top: 8px;
+}
