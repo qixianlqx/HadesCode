@@ -1,9 +1,51 @@
-.LogoImg {
-    width: 200px;
-    height: 66px;
+@media (min-width: 1200px) {
+    .col-lg-3 {
+        width: 25%;
+    }
 }
 
-.navbar-brand {
-    padding: 0;
-    padding-top: 8px;
+
+/* 企业介绍高度设置 */
+
+.culture-left .culture-text p {
+    display: block;
+}
+
+#service .service-hover p {
+    margin: 0;
+}
+
+.serviceSpan {
+    padding: 0 5px 0 5px;
+}
+
+
+/* 联系方式电话，传真，Email样式 */
+
+.contact .contactType .telephone span {
+    margin: 5px 0;
+    text-align: left;
+    padding-left: 25%;
+}
+
+.contact .contactType .message span {
+    margin: 5px 0;
+}
+
+.contact .contactType .telephone .EmailSpan {
+    padding-left: 20%;
+}
+
+.qrcode {
+    width: 130px;
+    height: 130px;
+}
+
+.proitem {
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
 }

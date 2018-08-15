@@ -31,8 +31,8 @@
                     <button type="button" data-toggle="collapse" data-target="#mb-navbar" class="navbar-toggle"><span
                         class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
                         class="icon-bar"></span><span class="icon-bar"></span></button>
-                    <a href="#" class="navbar-brand">
-                        <img src="images/logo.png" class="LogoImg" tppabs="/images/inner-logo.png" class="LogoImg" alt="logo">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="images/logo.png" class="LogoImg" class="LogoImg" alt="logo">
                     </a>
                 </div>
                 <div id="mb-navbar" class="collapse navbar-collapse">
@@ -44,7 +44,7 @@
                             <a href="about.html">关于哈迪斯</a>
                         </li>
                         <li>
-                            <a href="team.html">哈迪斯团队</a>
+                            <a href="team.html">产品中心</a>
                         </li>
                         <li>
                             <a href="caselist.html">哈迪斯服务</a>
@@ -62,7 +62,7 @@
     </div>
     <!--publicBanner-->
     <div class="piblicBanner">
-        <img src="images/innerPublicBanner.jpg" tppabs="/images/innerPublicBanner.jpg">
+        <img src="images/hezuo.jpg">
         <div class="breadcrumb_part">
             <div class="breadcrumb">
                 <div class="container">
@@ -93,7 +93,7 @@
                                     </p>
                                 </div>
                                 <div class="col-md-3">
-                                    <button type="button" class="btn btn-success btn-lg">联系我们</button>
+                                    <button type="button" class="btn btn-success btn-lg" onclick="document.getElementById('address').scrollIntoView(true);return false;">联系我们</button>
                                 </div>
                             </div>
                         </div>
@@ -101,27 +101,27 @@
                 </div>
             </div>
         </div>
-        <div class="map">
+        <div class="map" id="map">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 paddN">
-                        <iframe src="map.html" tppabs="/map.html" width="100%" height="400px"></iframe>
+                        <iframe src="map.html" tppabs="/map.html" width="100%" height="450px"></iframe>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="contactType">
+        <div class="contactType" id="address">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="common address">
+                        <div class="common address" style="padding: 30px 30px;">
                             <div class="pic">
                                 <img src="images/addressicon.png" tppabs="/images/addressicon.png">
                             </div>
                             <h4><strong>公司地址</strong></h4>
                             <p>深圳市龙岗区龙城街道华兴路天汇大厦A座311</p>
-                            <span><strong>邮编：315100</strong></span>
-                            <a href="javascript:;">查看位置</a>
+                            <span style="margin: 13px  0">邮编：518172</span>
+                            <a href="javascript:document.getElementById('map').scrollIntoView(true);">查看位置</a>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -130,8 +130,9 @@
                                 <img src="images/telphoneicon.png" tppabs="/images/telphoneicon.png">
                             </div>
                             <h4><strong>联系方式</strong></h4>
-                            <p>联系电话<br>0755-29985866</p>
-                            <span>E-mail：simon@zgaoho.com</span>
+                            <span>电话：0755-29985866</span>
+                            <span>传真：0755-27958566</span>
+                            <span class="EmailSpan">E-mail：simon@zgaoho.com</span>
                             <a href="javascript:;">联系我们</a>
                         </div>
                     </div>
@@ -141,8 +142,9 @@
                                 <img src="images/website_icon.png" tppabs="/images/website_icon.png">
                             </div>
                             <h4><strong>线上留言</strong></h4>
-                            <p>商务合作 业务咨询</p>
-                            <span>线上留言<br>及时回复</span>
+                            <span>商务合作 </span>
+                            <span>业务咨询</span>
+                            <span>在线留言</span>
                             <a href="javascript:;">点击留言</a>
                         </div>
                     </div>
@@ -175,9 +177,9 @@
                         </div> -->
                         <div>
                             <a href="#" class="thumbnail">
-                                <img src="images/erweima2.jpg">
+                                <img src="images/qrcode.png" class="qrcode">
                             </a>
-                            <p>扫码手机查看</p>
+                            <p>手机扫一扫</p>
                         </div>
                     </div>
                 </div>
@@ -185,7 +187,7 @@
         </div>
     </div>
     <div id="copyright">
-        <p><span>服务条款</span>Copyright©2018　深圳市哈迪斯进出口有限公司　保留所有权利</p>
+        <p><span></span>Copyright©2018　深圳市哈迪斯进出口有限公司　保留所有权利</p>
     </div>
 </body>
 
