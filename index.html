@@ -302,19 +302,19 @@
         $(function() {
             //产品展示列表鼠标选中效果
             //默认不显示
-            // $("#case .case-hover").hide();
-            // //鼠标移开悬停效果
-            // $(".case-item").on("mouseenter mouseleave", function(e) {
-            //     if (e.type == "mouseenter") {
-            //         //显示选中的产品
-            //         var id = $(this).find(".case-hover").attr("id");
-            //         $("#case .case-hover[id!=" + id + "]").hide(800);
-            //         $(this).find(".case-hover").show(600);
-            //     } else {
-            //         //隐藏之前选中的产品
-            //         $("#case .case-hover").hide(600);
-            //     }
-            // });
+            $("#case .case-hover").hide();
+            //鼠标移开悬停效果
+            $(".case-item").on("mouseenter mouseleave", function(e) {
+                if (e.type == "mouseenter") {
+                    //显示选中的产品
+                    var id = $(this).find(".case-hover").attr("id");
+                    $("#case .case-hover[id!=" + id + "]").hide(800);
+                    $(this).find(".case-hover").show(600);
+                } else {
+                    //隐藏之前选中的产品
+                    $("#case .case-hover").hide(600);
+                }
+            });
         });
     </script>
 </body>
