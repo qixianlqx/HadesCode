@@ -44,7 +44,7 @@
                             <a href="about.html">关于哈迪斯</a>
                         </li>
                         <li>
-                            <a href="team.html">产品中心</a>
+                            <a href="product.html">产品中心</a>
                         </li>
                         <li>
                             <a href="caselist.html">哈迪斯服务</a>
@@ -70,7 +70,7 @@
                         <div class="col-md-12">
                             <div class="guide">
                                 <h2>产品中心 /
-                                    <small>HADES Team</small>
+                                    <small>Product Center</small>
                                 </h2>
                             </div>
                         </div>
@@ -80,86 +80,36 @@
         </div>
     </div>
     <!--technicalTeam-->
-    <div class="technicalTeam">
+    <div class="technicalTeam" style="margin-top:10px;">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <a href="teamdetail.html" tppabs="/teamdetail.html">
-                        <div class="team">
-                            <img src="images/baiduli.jpg" tppabs="/images/baiduli.jpg">
-                            <div class="team_txt">
-                                <h4>严晖
-                                    <small>公司总经理</small>
-                                </h4>
-                                <p>深圳市哈迪斯进出口有限公司创始人，总经理。</p>
-                            </div>
-                        </div>
-                    </a>
+                <div class="col-md-3">
+                    <div class="list-group" style="font-weight:bold;" data-bind="foreach: typeList">
+                        <a href="jsvascript:void(0)" class="list-group-item active" data-bind="visible:id==1" style="font-size:18px;">产品分类 </a>
+                        <a href="jsvascript:void(0)" class="list-group-item" data-bind="text:name,click:$root.typeclick"></a>
+                    </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <a href="javascript:;">
-                        <div class="team">
-                            <img src="images/baiduli.jpg" tppabs="/images/baiduli.jpg">
-                            <div class="team_txt">
-                                <h4>严晖
-                                    <small>公司总经理</small>
-                                </h4>
-                                <p>深圳市哈迪斯进出口有限公司创始人，总经理。</p>
-                            </div>
+                <div class="col-md-9">
+                    <div class="alert alert-success" role="alert">
+                        <strong data-bind="text:'产品种类：'+currentTypeName()"></strong>
+                    </div>
+                    <div class="row" data-bind="foreach: ProDetails">
+                        <div class="col-md-4">
+                            <a data-bind="href:'productdetail.html?id='+num()">
+                                <div class="team">
+                                    <img data-bind="style:{width:'98%',height:'200px'},attr:{src:'images/PCB/'+ img,}">
+                                    <div class="team_txt">
+                                        <h4><span data-bind=" text:name"></span> </h4>
+                                        <ul style="text-align: left;">
+                                            <li>层数：<span data-bind=" text:num"></span></li>
+                                            <li><span data-bind="text:typeid==1 ? '线宽线距':'板厚'"></span>：<span data-bind=" text:linewidth"></span></li>
+                                            <li><span data-bind="text:typeid==1 ? '最小孔径':'线宽线距'"></span>：<span data-bind=" text:min"></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <a href="javascript:;">
-                        <div class="team">
-                            <img src="images/baiduli.jpg" tppabs="/images/baiduli.jpg">
-                            <div class="team_txt">
-                                <h4>严晖
-                                    <small>公司总经理</small>
-                                </h4>
-                                <p>深圳市哈迪斯进出口有限公司创始人，总经理。</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <a href="javascript:;">
-                        <div class="team">
-                            <img src="images/baiduli.jpg" tppabs="/images/baiduli.jpg">
-                            <div class="team_txt">
-                                <h4>严晖
-                                    <small>公司总经理</small>
-                                </h4>
-                                <p>深圳市哈迪斯进出口有限公司创始人，总经理。</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <a href="javascript:;">
-                        <div class="team">
-                            <img src="images/baiduli.jpg" tppabs="/images/baiduli.jpg">
-                            <div class="team_txt">
-                                <h4>严晖
-                                    <small>公司总经理</small>
-                                </h4>
-                                <p>深圳市哈迪斯进出口有限公司创始人，总经理。</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <a href="javascript:;">
-                        <div class="team">
-                            <img src="images/baiduli.jpg" tppabs="/images/baiduli.jpg">
-                            <div class="team_txt">
-                                <h4>严晖
-                                    <small>公司总经理</small>
-                                </h4>
-                                <p>深圳市哈迪斯进出口有限公司创始人，总经理。</p>
-                            </div>
-                        </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -183,15 +133,8 @@
                     <div class="footer-erwei">
                         <div>
                             <a href="#" class="thumbnail">
-                                <img src="images/erweima1.jpg">
-                            </a>
-                            <p>扫一扫下载外贸助手APP</p>
-                        </div>
-                        <div>
-                            <a href="#" class="thumbnail">
                                 <img src="images/qrcode.png" class="qrcode">
                             </a>
-                            <p>扫码关注恒道微信公众号</p>
                         </div>
                     </div>
                 </div>
@@ -202,5 +145,9 @@
         <p><span></span>Copyright©2018　深圳市哈迪斯进出口有限公司　保留所有权利　</p>
     </div>
 </body>
+<script type="text/javascript" src="js/proJs/pro.js"></script>
+<script type="text/javascript" src="js/knockoutjs/linq.min.js"></script>
+<script type="text/javascript" src="js/knockoutjs/knockout-3.4.2.js"></script>
+<script type="text/javascript" src="js/source/product.js"></script>
 
 </html>

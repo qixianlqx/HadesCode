@@ -1,6 +1,6 @@
 //pcb类型
 var proType = [{ name: 'PCB', id: 1 },
-    { name: 'FPC&RFPC', name: 2 }
+    { name: 'FPC&RFPC', id: 2 }
 ];
 //产品项目类
 var projectType = [
