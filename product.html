@@ -47,10 +47,7 @@
                             <a href="product.html">产品中心</a>
                         </li>
                         <li>
-                            <a href="caselist.html">哈迪斯服务</a>
-                        </li>
-                        <li>
-                            <a href="newslist.html">新闻中心</a>
+                            <a href="caselist.html">产品应用及工艺</a>
                         </li>
                         <li>
                             <a href="contact.html">联系我们</a>
@@ -62,54 +59,27 @@
     </div>
     <!--publicBanner-->
     <div class="piblicBanner">
-        <img src="images/innerPublicBanner.jpg" tppabs="/images/innerPublicBanner.jpg">
-        <div class="breadcrumb_part">
-            <div class="breadcrumb">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="guide">
-                                <h2>产品中心 /
-                                    <small>Product Center</small>
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <img src="images/innerPublicBanner.jpg">
     </div>
     <!--technicalTeam-->
     <div class="technicalTeam" style="margin-top:10px;">
         <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="list-group" style="font-weight:bold;" data-bind="foreach: typeList">
-                        <a href="jsvascript:void(0)" class="list-group-item active" data-bind="visible:id==1" style="font-size:18px;">产品分类 </a>
-                        <a href="jsvascript:void(0)" class="list-group-item" data-bind="text:name,click:$root.typeclick"></a>
-                    </div>
-                </div>
-                <div class="col-md-9">
-                    <div class="alert alert-success" role="alert">
-                        <strong data-bind="text:'产品种类：'+currentTypeName()"></strong>
-                    </div>
-                    <div class="row" data-bind="foreach: ProDetails">
-                        <div class="col-md-4">
-                            <a data-bind="href:'productdetail.html?id='+num()">
-                                <div class="team">
-                                    <img data-bind="style:{width:'98%',height:'200px'},attr:{src:'images/PCB/'+ img,}">
-                                    <div class="team_txt">
-                                        <h4><span data-bind=" text:name"></span> </h4>
-                                        <ul style="text-align: left;">
-                                            <li>层数：<span data-bind=" text:num"></span></li>
-                                            <li><span data-bind="text:typeid==1 ? '线宽线距':'板厚'"></span>：<span data-bind=" text:linewidth"></span></li>
-                                            <li><span data-bind="text:typeid==1 ? '最小孔径':'线宽线距'"></span>：<span data-bind=" text:min"></span></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </a>
+            <div class="row" data-bind="foreach: ProDetails">
+                <div class="col-md-4">
+                    <a data-bind="attr:{href:'productdetail.html?id='+id+'&typeid='+typeid}">
+                        <div class="team">
+                            <img data-bind="style:{width:'98%',height:'220px'},attr:{src:'images/PCB/'+ img}">
+                            <div class="team_txt">
+                                <h4><span data-bind=" text:name"></span> </h4>
+                                <ul style="text-align: left;">
+                                    <li>层数：<span data-bind=" text:num"></span></li>
+                                    <li>板厚：<span data-bind=" text:ply"></span></li>
+                                    <li>线宽线距：<span data-bind=" text:minlinewidth"></span></li>
+                                    <li>线宽线距：<span data-bind=" text:minlinerange"></span></li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -130,9 +100,9 @@
                     </div>
                 </div>
                 <div class="col-md-5 col-sm-5">
-                    <div class="footer-erwei">
+                    <div class="footer-erwei winshow">
                         <div>
-                            <a href="#" class="thumbnail">
+                            <a href="#" class="thumbnail_QC">
                                 <img src="images/qrcode.png" class="qrcode">
                             </a>
                         </div>

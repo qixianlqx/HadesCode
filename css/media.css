@@ -42,7 +42,7 @@
         padding: 0;
         border-top: 1px solid #819f98;
     }
-    #footer .footer-erwei {
+    #footer .footer-erwei winshow {
         justify-content: center;
     }
     #culture .culture-right {
@@ -125,6 +125,9 @@
     }
     .contact .contactInfo .contactTxt h4 {
         font-size: 16px;
+    }
+    .winshow {
+        display: none;
     }
 }
 

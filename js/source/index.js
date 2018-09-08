@@ -12,7 +12,7 @@ function getProctions() {
     var count = 1;
     $.each(data, function(index, obj) {
 
-        if (Enumerable.from(prolist).count("$.typeid==" + obj.typeid) < 4) {
+        if (Enumerable.from(prolist).count("$.typeid==" + obj.typeid) < 8) {
             prolist.push(obj);
         }
 

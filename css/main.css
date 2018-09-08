@@ -465,7 +465,7 @@ h3 {
     margin-right: 2%;
 }
 
-#footer .footer-erwei {
+#footer .footer-erwei winshow {
     text-align: center;
     padding: 9% 0;
     display: flex;
@@ -473,17 +473,17 @@ h3 {
     justify-content: flex-end;
 }
 
-#footer .footer-erwei div {
+#footer .footer-erwei winshow div {
     margin: 0 2%;
 }
 
-#footer .footer-erwei div p {
+#footer .footer-erwei winshow div p {
     margin: 5px 0;
     color: #fff;
     font-size: 12px;
 }
 
-#footer .footer-erwei .thumbnail {
+#footer .footer-erwei winshow .thumbnail {
     background: none;
     margin-bottom: 0;
 }
@@ -651,10 +651,14 @@ h3 {
     box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
 }
 
+.technicalTeam .team:hover .hoverSize {
+    font-weight: bold;
+}
+
 .technicalTeam .team .team_txt {
     overflow: hidden;
     padding: 0 10px;
-    height: 105px;
+    height: 125px;
 }
 
 .technicalTeam .team img {

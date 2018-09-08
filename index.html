@@ -53,10 +53,7 @@
                             <a href="product.html">产品中心</a>
                         </li>
                         <li>
-                            <a href="caselist.html">哈迪斯服务</a>
-                        </li>
-                        <li>
-                            <a href="newslist.html">新闻中心</a>
+                            <a href="caselist.html">产品应用及工艺</a>
                         </li>
                         <li>
                             <a href="contact.html">联系我们</a>
@@ -208,10 +205,10 @@
                                 <div data-bind="text:name" style="color:white;font-size:22px;margin: 25px 0;"></div>
                                 <ul style="color:white;text-align: left;">
                                     <li>层数：<span data-bind=" text:num"></span></li>
-                                    <li><span data-bind="text:typeid==1 ? '线宽线距':'板厚'"></span>：<span data-bind=" text:linewidth"></span></li>
-                                    <li><span data-bind="text:typeid==1 ? '最小孔径':'线宽线距'"></span>：<span data-bind=" text:min"></span></li>
+                                    <li>线宽线距：<span data-bind=" text:minlinewidth"></span></li>
+                                    <li>线宽线距：<span data-bind=" text:minlinerange"></span></li>
                                 </ul>
-                                <a class="case-more" href="#">查看详情</a>
+                                <a class="case-more" data-bind=" attr:{href:'productdetail.html?id='+id+'&typeid='+typeid}">查看详情</a>
                             </div>
                         </div>
                     </div>
@@ -277,15 +274,9 @@
                     </div>
                 </div>
                 <div class="col-md-5 col-sm-5">
-                    <div class="footer-erwei">
-                        <!-- <div>
-                            <a href="#" class="thumbnail">
-                                <img src="images/erweima1.jpg">
-                            </a>
-                            <p>扫一扫下载外贸助手APP</p>
-                        </div> -->
+                    <div class="footer-erwei winshow">
                         <div>
-                            <a href="#" class="thumbnail">
+                            <a href="#" class="thumbnail_QC">
                                 <img src="images/qrcode.png" class="qrcode">
                             </a>
                         </div>
