@@ -66,20 +66,42 @@ var domainType = [{ name: '消费电子', id: 1, img: '消费电子.jpg' },
 ];
 //产品
 var proList = [
-    { id: 1, name: '多层OSP板', typeid: 1, num: 4, linewidth: '3.9mil', min: '0.20mm', domain: '电脑主机板', domainType: 3, img: '多层osp板.PNG' },
+    { id: 1, name: '多层沉金板', typeid: 1, model: 'CP6I11806B4', num: 6, dispose: '沉金', minlinewidth: '0.178mm', minlinerange: '0.152mm', craft: '普通板', ply: '1.575mm', panel: 'FR-4，TG大于150', bore: '0.3mm', img: '多层沉金板.jpg' },
+    { id: 2, name: '双面沉银板', typeid: 1, model: 'CS2S16940A0', num: 2, dispose: '沉银', minlinewidth: '0.208mm', minlinerange: '0.117mm', craft: '沉银板', ply: '0.65mm', panel: 'RO4350,高TG', bore: '0.3mm', img: '双面沉银板.jpg' },
+    { id: 3, name: '高多层板', typeid: 1, model: 'CSBI13616A0', num: 12, dispose: '沉金', minlinewidth: '0.1mm', minlinerange: '0.125mm', craft: '高多层板', ply: '1.84mm', panel: '板材为IT180I,TG170', bore: '0.25mm', img: '高多层板.jpg' },
+    { id: 4, name: '高频混压树脂塞孔板', typeid: 1, model: 'CS4E11291A0', num: 4, dispose: 'OSP', minlinewidth: '0.15mm', minlinerange: '0.114mm', craft: 'POFV树脂塞孔', ply: '1.6mm', panel: '斗山DS-7408FR-4普通TG', bore: '0.3mm', img: '高频混压树脂塞孔板.jpg' },
+    { id: 5, name: '多层半孔沉金板', typeid: 1, model: 'CP4I14479A0', num: 4, dispose: '沉金', minlinewidth: '0.127mm', minlinerange: '0.076mm', craft: '半孔板', ply: '1.2mm', panel: '板材为IT158FR-4中TG', bore: '0.2mm', img: '多层半孔沉金板.jpg' },
+    { id: 6, name: '多层沉金板', typeid: 1, model: 'CP4I16751A0', num: 6, dispose: '沉金', minlinewidth: '0.12mm', minlinerange: '0.082mm', craft: '阻焊最小通孔0.2mm', ply: '1.575mm', panel: '使用S1000-2  高TG', bore: '0.2mm', img: '多层沉金板2.jpg' },
+    { id: 7, name: '树脂塞孔板', typeid: 1, model: 'CP2I14132A0', num: 2, dispose: '沉金', minlinewidth: '', minlinerange: '', craft: '树脂塞孔', ply: '1.575mm', panel: 'EM827FR-4,高TG', bore: '0.45mm', img: '树脂塞孔板.jpg' },
+    { id: 8, name: '双面普通板', typeid: 1, model: 'CP2E15261B0', num: 2, dispose: 'OSP', minlinewidth: '0.099mm', minlinerange: '0.101mm', craft: '普通板', ply: '1.6mm', panel: 'NY-2170有水印，FR-4，TG170', bore: '0.3mm', img: '双面普通板.jpg' },
+
+    { id: 9, name: '高频混压板', typeid: 1, model: 'CS4I14334A0', num: 4, dispose: '沉金', minlinewidth: '0.127mm', minlinerange: '0.216mm', craft: '混压+控深铣', ply: '1.5mm', panel: 'RO4350B+联茂IT180A(高TG)', bore: '0.35mm', img: '高频混压板.jpg' },
+    { id: 10, name: '双面喷锡板', typeid: 1, model: 'CP2F13217A1', num: 2, dispose: '无铅喷锡', minlinewidth: '0.25mm', minlinerange: '0.2mm', craft: '普通板', ply: '1.6mm', panel: 'KB,FR-4,TG130', bore: '0.3mm', img: '双面喷锡板.jpg' },
+    { id: 11, name: '多层主机板', typeid: 1, model: 'CP4E04177B1', num: 2, dispose: 'OSP', minlinewidth: '0.099mm', minlinerange: '0.101mm', craft: '主机板', ply: '1.6mm', panel: 'NY-2170有水印，FR-4，TG170', bore: '0.3mm', img: '多层主机板.jpg' },
+    { id: 12, name: '多层主机板', typeid: 1, model: 'CS4E08290A0', num: 4, dispose: 'OSP', minlinewidth: '0.102mm', minlinerange: '0.102mm', craft: '主机板', ply: '1.6mm', panel: '宏仁（MTC-97)FR-4，TG140', bore: '0.25mm', img: '多层主机板2.jpg' },
+    { id: 13, name: '高多层主机板', typeid: 1, model: 'CS8E16924A0', num: 8, dispose: 'OSP', minlinewidth: '0.095mm', minlinerange: '0.101mm', craft: '主机板', ply: '1.6mm', panel: '板材为IT158,FR-4中TG', bore: '0.25mm', img: '高多层主机板.jpg' },
+    { id: 14, name: '高多层主机板', typeid: 1, model: 'CSAE13379A0', num: 10, dispose: 'OSP', minlinewidth: '0.122mm', minlinerange: '0.133mm', craft: '普通板', ply: '2.0mm', panel: 'TU-662,FR-4，中TG', bore: '0.25mm', img: '高多层主机板2.jpg' },
+
+];
+
+//产品
+var proList2 = [
+    { id: 1, name: '多层沉金板', typeid: 1, model: 'CP6I11806B4', num: 6, dispose: '沉金', linewidth: '3.9mil', min: '0.20mm', craft: '普通板', ply: '1.575mm', panel: 'FR-4，TG大于150', bore: '0.3mm', img: '多层沉金板.jpg' },
     { id: 2, name: '多层选化板', typeid: 1, num: 6, linewidth: '3mil', min: '0.35mm', domain: '电视主板', domainType: 1, img: '多层选化板.PNG' },
     { id: 3, name: '双面沉金板', typeid: 1, num: 2, linewidth: '4mil', min: '0.40mm', domain: '汽车电子', domainType: 2, img: '双面沉金板.PNG' },
+    { id: 3, name: '双面沉银板', typeid: 1, num: 2, linewidth: '0.117mm', min: '0.208mm', domain: '汽车电子', domainType: 2, img: '双面沉银板.jpg' },
     { id: 4, name: '双面无铅喷锡板', typeid: 1, num: 2, linewidth: '10mil', min: '0.350mm', domain: '工业制造', domainType: 6, img: '双面无铅喷锡板.PNG' },
     { id: 5, name: '多层沉金板', typeid: 1, num: 6, linewidth: '4mil', min: '0.30mm', domain: '能源', domainType: 4, img: '多层沉金板.PNG' },
     { id: 6, name: '多层沉金板', typeid: 1, num: 4, linewidth: '8mil', min: '0.30mm', domain: '安防', domainType: 7, img: '多层沉金板2.PNG' },
     { id: 7, name: '双面沉金板', typeid: 1, num: 2, linewidth: '10mil', min: '0.30mm', domain: '医疗', domainType: 8, img: '双面沉金板2.PNG' },
     { id: 8, name: '双面无铅喷锡板', typeid: 1, num: 2, linewidth: '5mil', min: '0.30mm', domain: 'LED光电', domainType: 9, img: '双面无铅喷锡板2.PNG' },
-    { id: 9, name: '柔性电路板', typeid: 2, num: 4, linewidth: '0.15±0.03mm', min: '0.15/0.1mm', bqtype: 'SUS', img: '柔性电路板.PNG' },
-    { id: 10, name: '柔性电路板', typeid: 2, num: 2, linewidth: '0.15±0.03mm', min: '0.15/0.1mm', bqtype: 'SUS', img: '柔性电路板2.PNG' },
-    { id: 11, name: '柔性电路板', typeid: 2, num: 2, linewidth: '0.15±0.03mm', min: '0.15/0.1mm', bqtype: 'SUS', img: '柔性电路板3.PNG' },
-    { id: 12, name: '柔性电路板', typeid: 2, num: 4, linewidth: '0.15±0.03mm', min: '0.15/0.1mm', bqtype: 'SUS', img: '柔性电路板4.PNG' },
-    { id: 13, name: '软硬结合板', typeid: 2, num: 4, linewidth: '0.15±0.03mm', min: '0.6/0.03mm', bqtype: 'SUS', img: '软硬结合板.PNG' },
-    { id: 14, name: '软硬结合板', typeid: 2, num: 4, linewidth: '0.15±0.03mm', min: '0.6/0.03mm', bqtype: 'SUS', img: '软硬结合板2.PNG' },
-    { id: 15, name: '软硬结合板', typeid: 2, num: 4, linewidth: '0.15±0.03mm', min: '0.6/0.03mm', bqtype: 'SUS', img: '软硬结合板3.PNG' },
-    { id: 16, name: '软硬结合板', typeid: 2, num: 4, linewidth: '0.15±0.03mm', min: '0.6/0.03mm', bqtype: 'N.A', img: '软硬结合板4.PNG' },
+
+    { id: 1, name: '柔性电路板', typeid: 2, num: 4, linewidth: '0.15±0.03mm', min: '0.15/0.1mm', bqtype: 'SUS', img: '柔性电路板.PNG' },
+    { id: 2, name: '柔性电路板', typeid: 2, num: 2, linewidth: '0.15±0.03mm', min: '0.15/0.1mm', bqtype: 'SUS', img: '柔性电路板2.PNG' },
+    { id: 3, name: '柔性电路板', typeid: 2, num: 2, linewidth: '0.15±0.03mm', min: '0.15/0.1mm', bqtype: 'SUS', img: '柔性电路板3.PNG' },
+    { id: 4, name: '柔性电路板', typeid: 2, num: 4, linewidth: '0.15±0.03mm', min: '0.15/0.1mm', bqtype: 'SUS', img: '柔性电路板4.PNG' },
+    { id: 5, name: '软硬结合板', typeid: 2, num: 4, linewidth: '0.15±0.03mm', min: '0.6/0.03mm', bqtype: 'SUS', img: '软硬结合板.PNG' },
+    { id: 6, name: '软硬结合板', typeid: 2, num: 4, linewidth: '0.15±0.03mm', min: '0.6/0.03mm', bqtype: 'SUS', img: '软硬结合板2.PNG' },
+    { id: 7, name: '软硬结合板', typeid: 2, num: 4, linewidth: '0.15±0.03mm', min: '0.6/0.03mm', bqtype: 'SUS', img: '软硬结合板3.PNG' },
+    { id: 8, name: '软硬结合板', typeid: 2, num: 4, linewidth: '0.15±0.03mm', min: '0.6/0.03mm', bqtype: 'N.A', img: '软硬结合板4.PNG' },
 ];
