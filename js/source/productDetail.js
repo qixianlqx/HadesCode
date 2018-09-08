@@ -33,7 +33,7 @@ function getinfo(info, obj) {
             obj.preName(maxInfo.name);
         }
     }
- 
+
 }
 
 function ViewModel() {

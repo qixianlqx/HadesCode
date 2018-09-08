@@ -12,9 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="css/common.css" />
-
     <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
-    <script type="text/javascript" src="js/jquery.url.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/scrolltopcontrol.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
@@ -49,7 +47,10 @@
                             <a href="product.html">产品中心</a>
                         </li>
                         <li>
-                            <a href="caselist.html">产品应用及工艺</a>
+                            <a href="caselist.html">哈迪斯服务</a>
+                        </li>
+                        <li>
+                            <a href="newslist.html">新闻中心</a>
                         </li>
                         <li>
                             <a href="contact.html">联系我们</a>
@@ -61,44 +62,56 @@
     </div>
     <!--publicBanner-->
     <div class="piblicBanner">
-        <img src="images/innerPublicBanner.jpg">
-    </div>
-
-    <!--teamDetail-->
-    <div class="teamDetail">
-        <div class="container perContent">
-            <div class="row" data-bind="with:ProInfo">
-                <div class="col-md-8  col-md-12">
-                    <div class="per_pic">
-                        <img data-bind="attr:{src:'images/PCB/'+img}" style="height:450px;" />
-                    </div>
-                </div>
-                <div class="col-md-4  col-md-12">
-                    <div class="per_txt">
-                        <h4><span data-bind=" text:name" style="font-size:20px;"></span> </h4>
-                        <ul class="list-group">
-                            <li class="list-group-item">型号：<span data-bind=" text:model"></span></li>
-                            <li class="list-group-item">层数：<span data-bind=" text:num"></span></li>
-                            <li class="list-group-item">表面处理：<span data-bind=" text:dispose"></span></li>
-                            <li class="list-group-item">最小线宽：<span data-bind=" text:minlinewidth"></span></li>
-                            <li class="list-group-item">最小线距：<span data-bind=" text:minlinerange"></span></li>
-                            <li class="list-group-item">特殊工艺：<span data-bind=" text:craft"></span></li>
-                            <li class="list-group-item">板厚：<span data-bind=" text:ply"></span></li>
-                            <li class="list-group-item">板材：<span data-bind=" text:panel"></span></li>
-                            <li class="list-group-item">最小钻咀：<span data-bind=" text:bore"></span></li>
-                        </ul>
+        <img src="images/innerPublicBanner.jpg" tppabs="/images/innerPublicBanner.jpg">
+        <div class="breadcrumb_part">
+            <div class="breadcrumb">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="guide">
+                                <h2>产品中心 /
+                                    <small>Product Center</small>
+                                </h2>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <!--technicalTeam-->
+    <div class="technicalTeam" style="margin-top:10px;">
+        <div class="container">
             <div class="row">
-                <ul class="pager">
-                    <li class="previous">
-                        <a href="javascript:void(0);" style="margin-left:5px;" data-bind="text:'上一篇 '+$root.preName(),click:function(){ if($root.preName()!='无') { $root.click(0);}}"></a>
-                    </li>
-                    <li class="next">
-                        <a href="javascript:void(0);" style="margin-right:5px;" data-bind="text:'下一篇 '+$root.nextName(),click:function(){ if($root.nextName()!='无') {$root.click(1);}}"></a>
-                    </li>
-                </ul>
+                <div class="col-md-3">
+                    <div class="list-group" style="font-weight:bold;" data-bind="foreach: typeList">
+                        <a href="jsvascript:void(0)" class="list-group-item active" data-bind="visible:id==1" style="font-size:18px;">产品分类 </a>
+                        <a href="jsvascript:void(0)" class="list-group-item" data-bind="text:name,click:$root.typeclick"></a>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="alert alert-success" role="alert">
+                        <strong>当前产品种类：<span data-bind="text:currentTypeName" style="font-size:18px;"></span></strong>
+                    </div>
+                    <div class="row" data-bind="foreach: ProDetails">
+                        <div class="col-md-4">
+                            <a data-bind="attr:{href:'productdetail.html?id='+id+'&typeid='+typeid}">
+                                <div class="team">
+                                    <img data-bind="style:{width:'98%',height:'200px'},attr:{src:'images/PCB/'+ img}">
+                                    <div class="team_txt">
+                                        <h4><span data-bind=" text:name"></span> </h4>
+                                        <ul style="text-align: left;">
+                                            <li>层数：<span data-bind=" text:num"></span></li>
+                                            <li>板厚：<span data-bind=" text:ply"></span></li>
+                                            <li>线宽线距：<span data-bind=" text:minlinewidth"></span></li>
+                                            <li>线宽线距：<span data-bind=" text:minlinerange"></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -118,9 +131,9 @@
                     </div>
                 </div>
                 <div class="col-md-5 col-sm-5">
-                    <div class="footer-erwei winshow">
+                    <div class="footer-erwei">
                         <div>
-                            <a href="#" class="thumbnail_QC">
+                            <a href="#" class="thumbnail">
                                 <img src="images/qrcode.png" class="qrcode">
                             </a>
                         </div>
@@ -130,12 +143,12 @@
         </div>
     </div>
     <div id="copyright">
-        <p> Copyright©2018　深圳市哈迪斯进出口有限公司　<span class="winshow">保留所有权利</span></p>
+        <p><span></span>Copyright©2018　深圳市哈迪斯进出口有限公司　保留所有权利　</p>
     </div>
 </body>
 <script type="text/javascript" src="js/proJs/pro.js"></script>
 <script type="text/javascript" src="js/knockoutjs/linq.min.js"></script>
 <script type="text/javascript" src="js/knockoutjs/knockout-3.4.2.js"></script>
-<script type="text/javascript" src="js/source/productDetail.js"></script>
+<script type="text/javascript" src="js/source/product.js"></script>
 
 </html>
