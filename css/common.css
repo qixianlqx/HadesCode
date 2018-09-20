@@ -73,3 +73,12 @@
     font-size: 18px;
     font-weight: bold;
 }
+
+li.active {
+    border-bottom: 3px solid #27a0d2;
+}
+
+#mb-navbar li a.active {
+    font-size: 22px;
+    color: #27a0d2 !important;
+}
